@@ -1,6 +1,6 @@
 flows:
-  c2fcccac-1214-419b-b00b-474b595b37e8: {ver: 1, file: 두번째_버킷_깃.snapshot, comments: '',
-    author: anonymous, created: 1767970506162, flowName: 두번째 버킷 깃, flowDesc: ''}
+  c2fcccac-1214-419b-b00b-474b595b37e8: {ver: 2, file: 두번째_버킷_깃.snapshot, comments: 두번쨰
+      구룹 버킷 커밋, author: anonymous, created: 1767970520942, flowName: 두번째 버킷 깃, flowDesc: ''}
   92fb6838-8465-4124-832f-d2cf40cf697b: {ver: 2, file: git_bucket_flow.snapshot, comments: e두번째,
     author: anonymous, created: 1767970238261, flowName: git_bucket_flow, flowDesc: ''}
 layoutVer: 1
