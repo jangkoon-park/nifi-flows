@@ -1,5 +1,5 @@
 flows:
-  92fb6838-8465-4124-832f-d2cf40cf697b: {ver: 1, file: git_bucket_flow.snapshot, comments: '',
-    author: anonymous, created: 1767970212669, flowName: git_bucket_flow, flowDesc: ''}
+  92fb6838-8465-4124-832f-d2cf40cf697b: {ver: 2, file: git_bucket_flow.snapshot, comments: e두번째,
+    author: anonymous, created: 1767970238261, flowName: git_bucket_flow, flowDesc: ''}
 layoutVer: 1
 bucketId: d1faae79-418e-4ad5-bcb4-6783872673cf
