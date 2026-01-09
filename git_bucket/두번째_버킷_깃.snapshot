@@ -1,0 +1,138 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "ec821277-3184-3c18-bc83-409f0123f0be",
+        "inputPorts" : [ ],
+        "instanceIdentifier" : "9e4307c1-019b-1000-0a64-e3b8657146b8",
+        "labels" : [ ],
+        "name" : "pg_test",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 1248.0,
+          "y" : 1192.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-stateful-analysis-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.17.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "ec821277-3184-3c18-bc83-409f0123f0be",
+          "identifier" : "d4e74b46-6969-3b3d-8bfa-04258427175d",
+          "instanceIdentifier" : "9e47fd1d-019b-1000-c360-7390a1a7a053",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "AttributeRollingWindow",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 419.99999016563754,
+            "y" : 238.00001221265143
+          },
+          "properties" : { },
+          "propertyDescriptors" : {
+            "Value to track" : {
+              "displayName" : "Value to track",
+              "identifiesControllerService" : false,
+              "name" : "Value to track",
+              "sensitive" : false
+            },
+            "Time window" : {
+              "displayName" : "Time window",
+              "identifiesControllerService" : false,
+              "name" : "Time window",
+              "sensitive" : false
+            },
+            "Sub-window length" : {
+              "displayName" : "Sub-window length",
+              "identifiesControllerService" : false,
+              "name" : "Sub-window length",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-websocket-processors-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.17.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "ec821277-3184-3c18-bc83-409f0123f0be",
+          "identifier" : "9bafedf2-331a-3f90-84b8-48b94825eb68",
+          "instanceIdentifier" : "9e4b043c-019b-1000-687a-eb9d3a05f0a9",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "ConnectWebSocket",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 976.0,
+            "y" : 232.0
+          },
+          "properties" : { },
+          "propertyDescriptors" : {
+            "websocket-client-controller-service" : {
+              "displayName" : "WebSocket Client ControllerService",
+              "identifiesControllerService" : true,
+              "name" : "websocket-client-controller-service",
+              "sensitive" : false
+            },
+            "websocket-client-id" : {
+              "displayName" : "WebSocket Client Id",
+              "identifiesControllerService" : false,
+              "name" : "websocket-client-id",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.websocket.ConnectWebSocket",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { }
+    }
+  }
+}
