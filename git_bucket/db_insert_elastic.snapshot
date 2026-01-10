@@ -461,8 +461,8 @@
           "name" : "UpdateCounter",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 1072.0,
-            "y" : -592.0
+            "x" : 904.0,
+            "y" : -616.0
           },
           "properties" : {
             "delta" : "1"
