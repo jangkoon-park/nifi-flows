@@ -6,8 +6,8 @@ flows:
       처리후 저장하기 엘라스틱에 저장, flowDesc: ''}
   92fb6838-8465-4124-832f-d2cf40cf697b: {ver: 2, file: git_bucket_flow.snapshot, comments: e두번째,
     author: anonymous, created: 1767970238261, flowName: git_bucket_flow, flowDesc: ''}
-  c34e9466-4552-4fd2-b524-4e8c3a4f9d7c: {ver: 2, file: db_insert_elastic.snapshot,
-    comments: 'db insert elastic  그리고 모니터링 시작 하기 ', author: anonymous, created: 1768051418316,
-    flowName: db insert elastic, flowDesc: ''}
+  c34e9466-4552-4fd2-b524-4e8c3a4f9d7c: {ver: 3, file: db_insert_elastic.snapshot,
+    comments: 'ch9: add UpdateCounter  업데이트 카운트 반듬 전역으로 to_es_count 생성함 ', author: anonymous,
+    created: 1768052173884, flowName: db insert elastic, flowDesc: ''}
 layoutVer: 1
 bucketId: d1faae79-418e-4ad5-bcb4-6783872673cf

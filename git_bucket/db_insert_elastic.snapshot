@@ -36,21 +36,21 @@
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
-          "identifier" : "887ab421-f09e-3639-bf29-a7d742d04de0",
-          "instanceIdentifier" : "02cab98e-019b-1000-dd5e-1a7e64349711",
+          "identifier" : "2d862a3a-438d-3381-93b5-d5050554745d",
+          "instanceIdentifier" : "019b1009-9c7a-12ca-00cf-367b36575f13",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
           "name" : "",
           "partitioningAttribute" : "",
           "prioritizers" : [ ],
-          "selectedRelationships" : [ "splits" ],
+          "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
             "groupId" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
-            "id" : "93bceca0-ecc5-3f1d-9ac5-400759eccb5d",
-            "instanceIdentifier" : "02c7d50d-019b-1000-19b9-e01059b948df",
-            "name" : "SplitRecord",
+            "id" : "556da474-2810-3a1f-9310-4097507e1c5d",
+            "instanceIdentifier" : "a80a950c-019b-1000-17e2-385bcf362545",
+            "name" : "UpdateCounter",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -84,6 +84,39 @@
             "id" : "09f32e77-f895-3393-934a-837e299dc6c2",
             "instanceIdentifier" : "02bd4693-019b-1000-ec57-9529c09c9d16",
             "name" : "ExecuteSQLRecord",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
+            "id" : "556da474-2810-3a1f-9310-4097507e1c5d",
+            "instanceIdentifier" : "a80a950c-019b-1000-17e2-385bcf362545",
+            "name" : "UpdateCounter",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
+          "identifier" : "1f89a6bc-7583-394b-a0ee-4c4e846fc224",
+          "instanceIdentifier" : "019b1008-9c7a-12ca-0cf2-98e25e65dd56",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "splits" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
+            "id" : "93bceca0-ecc5-3f1d-9ac5-400759eccb5d",
+            "instanceIdentifier" : "02c7d50d-019b-1000-19b9-e01059b948df",
+            "name" : "SplitRecord",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -461,10 +494,11 @@
           "name" : "UpdateCounter",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 904.0,
+            "x" : 1048.0,
             "y" : -616.0
           },
           "properties" : {
+            "counter-name" : "to_es_count",
             "delta" : "1"
           },
           "propertyDescriptors" : {
