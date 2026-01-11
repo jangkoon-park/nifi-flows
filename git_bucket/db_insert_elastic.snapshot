@@ -226,7 +226,7 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 1800.0,
-            "y" : -912.0
+            "y" : -936.0
           },
           "properties" : {
             "webhook-text" : "[NiFi][ES 실패]\nTime=${now():format(\"yyyy-MM-dd HH:mm:ss\")}\nProcessor=PutElasticsearchHttp\nFlowFile=${uuid}\nError=${exception.message}"
