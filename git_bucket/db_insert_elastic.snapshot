@@ -62,6 +62,39 @@
           "destination" : {
             "comments" : "",
             "groupId" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
+            "id" : "c5ffb5c9-4584-3786-8d2f-513e69cde830",
+            "instanceIdentifier" : "ad4e65c8-019b-1000-78a4-a462ffc076b0",
+            "name" : "PutFile",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
+          "identifier" : "f6fba0f3-1934-30d5-97dc-270690f7e470",
+          "instanceIdentifier" : "ad4eeaa1-019b-1000-85cf-a65412fbe72d",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
+            "id" : "2bcc5576-aaea-362c-8e84-d4e8cb08b91b",
+            "instanceIdentifier" : "02ca9c7a-019b-1000-f898-bc484514f1b5",
+            "name" : "PutElasticsearchHttp",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
             "id" : "93bceca0-ecc5-3f1d-9ac5-400759eccb5d",
             "instanceIdentifier" : "02c7d50d-019b-1000-19b9-e01059b948df",
             "name" : "SplitRecord",
@@ -140,7 +173,7 @@
         },
         "processGroups" : [ ],
         "processors" : [ {
-          "autoTerminatedRelationships" : [ "success", "failure", "retry" ],
+          "autoTerminatedRelationships" : [ "success" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -159,8 +192,8 @@
           "name" : "PutElasticsearchHttp",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 1528.0,
-            "y" : -904.0
+            "x" : 1232.0,
+            "y" : -912.0
           },
           "properties" : {
             "elasticsearch-http-response-timeout" : "15 secs",
@@ -305,8 +338,8 @@
           "name" : "SplitRecord",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 824.0,
-            "y" : -888.0
+            "x" : 648.0,
+            "y" : -904.0
           },
           "properties" : {
             "Record Writer" : "4d356700-5d5d-398a-bd37-1d0dd10d0dc4",
@@ -362,8 +395,8 @@
           "name" : "ExecuteSQLRecord",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 216.0,
-            "y" : -792.0
+            "x" : 288.0,
+            "y" : -576.0
           },
           "properties" : {
             "esql-max-rows" : "0",
@@ -494,8 +527,8 @@
           "name" : "UpdateCounter",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 1048.0,
-            "y" : -616.0
+            "x" : 960.0,
+            "y" : -568.0
           },
           "properties" : {
             "counter-name" : "to_es_count",
@@ -523,6 +556,93 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.UpdateCounter",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.17.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
+          "identifier" : "c5ffb5c9-4584-3786-8d2f-513e69cde830",
+          "instanceIdentifier" : "ad4e65c8-019b-1000-78a4-a462ffc076b0",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "PutFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1464.0,
+            "y" : -584.0
+          },
+          "properties" : {
+            "Create Missing Directories" : "true",
+            "Directory" : "/data/nifi/failures/es",
+            "Conflict Resolution Strategy" : "fail"
+          },
+          "propertyDescriptors" : {
+            "Group" : {
+              "displayName" : "Group",
+              "identifiesControllerService" : false,
+              "name" : "Group",
+              "sensitive" : false
+            },
+            "Owner" : {
+              "displayName" : "Owner",
+              "identifiesControllerService" : false,
+              "name" : "Owner",
+              "sensitive" : false
+            },
+            "Create Missing Directories" : {
+              "displayName" : "Create Missing Directories",
+              "identifiesControllerService" : false,
+              "name" : "Create Missing Directories",
+              "sensitive" : false
+            },
+            "Permissions" : {
+              "displayName" : "Permissions",
+              "identifiesControllerService" : false,
+              "name" : "Permissions",
+              "sensitive" : false
+            },
+            "Maximum File Count" : {
+              "displayName" : "Maximum File Count",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Count",
+              "sensitive" : false
+            },
+            "Last Modified Time" : {
+              "displayName" : "Last Modified Time",
+              "identifiesControllerService" : false,
+              "name" : "Last Modified Time",
+              "sensitive" : false
+            },
+            "Directory" : {
+              "displayName" : "Directory",
+              "identifiesControllerService" : false,
+              "name" : "Directory",
+              "sensitive" : false
+            },
+            "Conflict Resolution Strategy" : {
+              "displayName" : "Conflict Resolution Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Conflict Resolution Strategy",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.PutFile",
           "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ],
