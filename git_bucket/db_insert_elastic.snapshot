@@ -29,6 +29,39 @@
           "destination" : {
             "comments" : "",
             "groupId" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
+            "id" : "3d0cab79-6c40-35a2-aefb-322da248f34e",
+            "instanceIdentifier" : "ad59390f-019b-1000-e5d5-fe4e78859c63",
+            "name" : "PutSlack",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
+          "identifier" : "52f9a1af-6ad6-352d-a925-dc020142ec06",
+          "instanceIdentifier" : "ad5a3673-019b-1000-95d7-97f32fa2bb04",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
+            "id" : "c5ffb5c9-4584-3786-8d2f-513e69cde830",
+            "instanceIdentifier" : "ad4e65c8-019b-1000-78a4-a462ffc076b0",
+            "name" : "PutFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
             "id" : "2bcc5576-aaea-362c-8e84-d4e8cb08b91b",
             "instanceIdentifier" : "02ca9c7a-019b-1000-f898-bc484514f1b5",
             "name" : "PutElasticsearchHttp",
@@ -173,7 +206,80 @@
         },
         "processGroups" : [ ],
         "processors" : [ {
-          "autoTerminatedRelationships" : [ "success" ],
+          "autoTerminatedRelationships" : [ "success", "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-slack-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.17.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "be53b059-730d-35ce-857c-87f20a1aa8a7",
+          "identifier" : "3d0cab79-6c40-35a2-aefb-322da248f34e",
+          "instanceIdentifier" : "ad59390f-019b-1000-e5d5-fe4e78859c63",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "PutSlack",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1800.0,
+            "y" : -912.0
+          },
+          "properties" : {
+            "webhook-text" : "[NiFi][ES 실패]\nTime=${now():format(\"yyyy-MM-dd HH:mm:ss\")}\nProcessor=PutElasticsearchHttp\nFlowFile=${uuid}\nError=${exception.message}"
+          },
+          "propertyDescriptors" : {
+            "icon-emoji" : {
+              "displayName" : "Icon Emoji",
+              "identifiesControllerService" : false,
+              "name" : "icon-emoji",
+              "sensitive" : false
+            },
+            "webhook-url" : {
+              "displayName" : "Webhook URL",
+              "identifiesControllerService" : false,
+              "name" : "webhook-url",
+              "sensitive" : true
+            },
+            "webhook-text" : {
+              "displayName" : "Webhook Text",
+              "identifiesControllerService" : false,
+              "name" : "webhook-text",
+              "sensitive" : false
+            },
+            "channel" : {
+              "displayName" : "Channel",
+              "identifiesControllerService" : false,
+              "name" : "channel",
+              "sensitive" : false
+            },
+            "icon-url" : {
+              "displayName" : "Icon URL",
+              "identifiesControllerService" : false,
+              "name" : "icon-url",
+              "sensitive" : false
+            },
+            "username" : {
+              "displayName" : "Username",
+              "identifiesControllerService" : false,
+              "name" : "username",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.slack.PutSlack",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success", "retry" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -558,7 +664,7 @@
           "type" : "org.apache.nifi.processors.standard.UpdateCounter",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ ],
+          "autoTerminatedRelationships" : [ "failure" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
