@@ -751,7 +751,7 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 1144.0,
-            "y" : -360.0
+            "y" : -320.0
           },
           "properties" : {
             "elasticsearch-http-response-timeout" : "15 secs",
