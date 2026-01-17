@@ -1,0 +1,52 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "38c8fd1f-f120-3df8-8da7-f114d7cf839e",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "38c8fd1f-f120-3df8-8da7-f114d7cf839e",
+          "identifier" : "c31d7653-42d4-313d-bea7-a78119de7fe6",
+          "instanceIdentifier" : "cc959775-019b-1000-6a81-6aa1c6bde2c3",
+          "name" : "IN_RAW",
+          "position" : {
+            "x" : 397.9999958532378,
+            "y" : 86.99999616100527
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "INPUT_PORT"
+        } ],
+        "instanceIdentifier" : "cc9458df-019b-1000-1401-61e80cedbce3",
+        "labels" : [ ],
+        "name" : "WRITE",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 1168.0,
+          "y" : 704.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { }
+    }
+  }
+}
