@@ -1,0 +1,52 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "bdb978ea-cbf8-3cd7-bab8-9424b83a8d8c",
+        "inputPorts" : [ ],
+        "instanceIdentifier" : "cc91c219-019b-1000-7834-3b230f7ca71a",
+        "labels" : [ ],
+        "name" : "INGEST_TEST",
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "bdb978ea-cbf8-3cd7-bab8-9424b83a8d8c",
+          "identifier" : "8e97e67b-2653-32cc-b923-cdf8ec9771d7",
+          "instanceIdentifier" : "cc99e5b7-019b-1000-071c-a4b100b4e6ae",
+          "name" : "OUT_RAW",
+          "position" : {
+            "x" : 422.31526909776454,
+            "y" : 381.57723653176834
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        } ],
+        "position" : {
+          "x" : 376.0,
+          "y" : 736.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { }
+    }
+  }
+}
