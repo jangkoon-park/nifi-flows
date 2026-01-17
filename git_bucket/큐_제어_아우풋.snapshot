@@ -30,8 +30,8 @@
           "instanceIdentifier" : "cc99e5b7-019b-1000-071c-a4b100b4e6ae",
           "name" : "OUT_RAW",
           "position" : {
-            "x" : 422.31526909776454,
-            "y" : 381.57723653176834
+            "x" : 408.0,
+            "y" : 360.0
           },
           "scheduledState" : "ENABLED",
           "type" : "OUTPUT_PORT"
