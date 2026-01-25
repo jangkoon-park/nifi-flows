@@ -443,8 +443,8 @@
           "name" : "GenerateFlowFile",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 680.0,
-            "y" : 816.0
+            "x" : 640.0,
+            "y" : 768.0
           },
           "properties" : {
             "character-set" : "UTF-8",
