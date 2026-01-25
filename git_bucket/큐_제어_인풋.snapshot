@@ -59,7 +59,7 @@
           "name" : "IN_RAW",
           "position" : {
             "x" : 248.0,
-            "y" : 64.0
+            "y" : 96.0
           },
           "scheduledState" : "ENABLED",
           "type" : "INPUT_PORT"
