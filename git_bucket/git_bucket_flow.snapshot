@@ -23,8 +23,8 @@
         "name" : "git_bucket_test",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 1944.0,
-          "y" : 1176.0
+          "x" : 1064.0,
+          "y" : 1392.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -47,8 +47,8 @@
           "name" : "AttributesToCSV",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 555.0000011483702,
-            "y" : 287.0000043526706
+            "x" : 560.0,
+            "y" : 304.0
           },
           "properties" : {
             "null-value" : "false",
