@@ -188,8 +188,8 @@
         "name" : "json excute",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 424.53546664269965,
-          "y" : 912.4351384204058
+          "x" : 408.0,
+          "y" : 368.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -443,8 +443,8 @@
           "name" : "GenerateFlowFile",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 688.0,
-            "y" : 768.0
+            "x" : 680.0,
+            "y" : 816.0
           },
           "properties" : {
             "character-set" : "UTF-8",
@@ -562,7 +562,7 @@
               "name" : "Module Directory",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "DIRECTORY", "FILE" ]
+                "resourceTypes" : [ "FILE", "DIRECTORY" ]
               },
               "sensitive" : false
             }
@@ -682,7 +682,7 @@
               "name" : "Module Directory",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "DIRECTORY", "FILE" ]
+                "resourceTypes" : [ "FILE", "DIRECTORY" ]
               },
               "sensitive" : false
             }
