@@ -16,15 +16,15 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "ec821277-3184-3c18-bc83-409f0123f0be",
+        "identifier" : "10cf6977-e95c-3986-a8e6-6c966506b178",
         "inputPorts" : [ ],
-        "instanceIdentifier" : "9e4307c1-019b-1000-0a64-e3b8657146b8",
+        "instanceIdentifier" : "a34f4295-019b-1000-4b8f-d0825aa950d3",
         "labels" : [ ],
         "name" : "pg_test",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 1248.0,
-          "y" : 1192.0
+          "x" : 1624.0,
+          "y" : 1384.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -40,15 +40,15 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "ec821277-3184-3c18-bc83-409f0123f0be",
+          "groupIdentifier" : "10cf6977-e95c-3986-a8e6-6c966506b178",
           "identifier" : "d4e74b46-6969-3b3d-8bfa-04258427175d",
-          "instanceIdentifier" : "9e47fd1d-019b-1000-c360-7390a1a7a053",
+          "instanceIdentifier" : "49ae543e-79d7-3e43-ceb9-168e6e3048b1",
           "maxBackoffPeriod" : "10 mins",
           "name" : "AttributeRollingWindow",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 419.99999016563754,
-            "y" : 238.00001221265143
+            "x" : 424.0,
+            "y" : 272.0
           },
           "properties" : { },
           "propertyDescriptors" : {
@@ -93,9 +93,9 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "ec821277-3184-3c18-bc83-409f0123f0be",
+          "groupIdentifier" : "10cf6977-e95c-3986-a8e6-6c966506b178",
           "identifier" : "9bafedf2-331a-3f90-84b8-48b94825eb68",
-          "instanceIdentifier" : "9e4b043c-019b-1000-687a-eb9d3a05f0a9",
+          "instanceIdentifier" : "c79ee2d3-d192-3e20-b00b-2a0429dbc1fa",
           "maxBackoffPeriod" : "10 mins",
           "name" : "ConnectWebSocket",
           "penaltyDuration" : "30 sec",
