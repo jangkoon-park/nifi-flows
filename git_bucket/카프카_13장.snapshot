@@ -266,8 +266,8 @@
           "name" : "PublishKafka_2_0",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 1200.0,
-            "y" : 184.0
+            "x" : 1208.0,
+            "y" : 160.0
           },
           "properties" : {
             "compression.type" : "none",

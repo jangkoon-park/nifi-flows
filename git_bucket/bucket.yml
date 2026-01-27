@@ -1,6 +1,6 @@
 flows:
-  ce2160be-ca07-4d86-81ab-507f74c9216b: {ver: 1, file: 카프카_13장.snapshot, comments: '',
-    author: anonymous, created: 1769511569628, flowName: 카프카 13장, flowDesc: ''}
+  ce2160be-ca07-4d86-81ab-507f74c9216b: {ver: 2, file: 카프카_13장.snapshot, comments: 13장,
+    author: anonymous, created: 1769511589533, flowName: 카프카 13장, flowDesc: ''}
   6bc7a2ab-7e9c-4d25-ba0c-46411d66410f: {ver: 4, file: 큐_제어_인풋.snapshot, comments: '',
     author: anonymous, created: 1769329677476, flowName: 큐 제어 인풋, flowDesc: ''}
   c2fcccac-1214-419b-b00b-474b595b37e8: {ver: 3, file: 두번째_버킷_깃.snapshot, comments: '',
