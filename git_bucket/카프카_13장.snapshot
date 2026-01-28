@@ -266,7 +266,7 @@
           "name" : "PublishKafka_2_0",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 1208.0,
+            "x" : 1264.0,
             "y" : 160.0
           },
           "properties" : {
@@ -276,8 +276,8 @@
             "max.block.ms" : "5 sec",
             "message-header-encoding" : "UTF-8",
             "ack.wait.time" : "5 secs",
-            "use-transactions" : "true",
-            "acks" : "all",
+            "use-transactions" : "false",
+            "acks" : "1",
             "security.protocol" : "PLAINTEXT",
             "max.request.size" : "1 MB",
             "sasl.token.auth" : "false",
